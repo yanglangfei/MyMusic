@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ui_titlebar" android:id="@+id/tb"></include>
+
+    <ImageView
+        android:layout_below="@+id/tb"
+        android:id="@+id/songImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/iv_last"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/songImg"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/last"
+        android:tint="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/iv_state"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/iv_last"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/zt"
+        android:tint="@color/colorAccent" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/iv_last"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/next"
+        android:tint="@color/colorAccent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/sb_lay"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/iv_state"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_current_time"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:text="00:00:00"/>
+        <SeekBar
+            android:layout_width="match_parent"
+            android:id="@+id/sb"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@+id/tv_current_time"
+            style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="10dp"
+            android:id="@+id/end_time"
+            android:text="00:00:00"/>
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sb_lay"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.yf.mymusic.view.WordView
+                android:id="@+id/songTxt"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

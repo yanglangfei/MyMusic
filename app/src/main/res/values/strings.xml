@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMusic</string>
+    <string-array name="searchType">
+        <item>按歌手搜</item>
+        <item>按名称搜</item>
+    </string-array>
+</resources>
